@@ -1,0 +1,7 @@
+---
+# Handler to handle DB tier notifications
+
+- name: restart mariadb
+  ansible.builtin.systemd: 
+    name: mariadb 
+    state: restarted

@@ -10,10 +10,9 @@
 
 ### Create Custom Content Collection
 
-**Collection Skeleton**
-`
-ansible-galaxy collection init --init-path ./ jacek.custom_app
-`
+**Collection Skeleton
+
+`ansible-galaxy collection init --init-path ./ jacek.custom_app`
 
 Place Roles, modules, plugins etc.
 
