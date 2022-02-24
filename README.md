@@ -27,3 +27,8 @@ In collection dir start following:
 ```bash
 ansible-galaxy collection build
 ```
+
+### Publish collection (Automation Hub On-Prem)
+
+1. Create namespace on Hub
+2. Upload collection archive
