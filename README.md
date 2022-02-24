@@ -10,10 +10,20 @@
 
 ### Create Custom Content Collection
 
-**Collection Skeleton
+#### Collection Skeleton
 
 `ansible-galaxy collection init --init-path ./ jacek.custom_app`
+
+#### Place Content
 
 Place Roles, modules, plugins etc.
 
 In my case I will copy previously prepared roles and copy modules from ansible.posix collection
+
+#### Build collection
+
+In collection dir start following:
+
+```bash
+ansible-galaxy collection build
+```
