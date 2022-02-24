@@ -8,7 +8,7 @@
 4. Use Custom Collection with ansible-navigator
 5. Use Custom Collection with Controller
 
-### Create Custom Content Collection
+### 1. Create Custom Content Collection
 
 #### Collection Skeleton
 
@@ -32,3 +32,33 @@ ansible-galaxy collection build
 
 1. Create namespace on Hub
 2. Upload collection archive
+
+## 2. Create Custom EE with custom_app collection
+
+### Login to registry
+
+```bash
+podman login registry.redhat.io
+```
+
+### Create all required files for custom_app_ee
+
+#### requirements.yml
+
+```yaml
+---
+collections:
+  - jacek.custom_app
+
+```
+
+#### ansible.cfg
+
+```ini
+[galaxy]
+server_list = published_repo
+
+[galaxy_server.published_repo]
+url=https://jskauthub.redhat.lab/api/galaxy/content/published/
+token=
+```
