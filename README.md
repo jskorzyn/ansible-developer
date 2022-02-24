@@ -18,4 +18,3 @@ ansible-galaxy collection init --init-path ./ jacek.custom_app
 Place Roles, modules, plugins etc.
 
 In my case I will copy previously prepared roles and copy modules from ansible.posix collection
-
