@@ -62,3 +62,33 @@ server_list = published_repo
 url=https://jskauthub.redhat.lab/api/galaxy/content/published/
 token=
 ```
+
+#### ansible-builder image definition file - custom_app_ee_def.yml
+
+```yaml
+version: 1
+
+build_arg_defaults:
+  ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: "-v"
+
+ansible_config: 'ansible.cfg'
+
+dependencies:
+  galaxy: requirements.yml
+#  python: requirements.txt
+#  system: bindep.txt
+
+additional_build_steps:
+  prepend: |
+    RUN whoami
+    RUN cat /etc/os-release
+  append:
+    - RUN echo This is a post-install command!
+    - RUN ls -la /etc
+```
+
+### Build custom EE
+
+```bash
+ansible-builder build -f custom_app_ee_def.yml -t custom_app_ee
+```
