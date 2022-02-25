@@ -1,0 +1,11 @@
+---
+- name: App Install 
+  hosts: all
+  
+  vars_files: app-install-vars.yml
+
+  roles:
+    - mariadb
+    - nginx
+    - phpfpm
+    - wordpress
