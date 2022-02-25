@@ -1,0 +1,6 @@
+---
+- name: App Install VM prep
+  hosts: all
+
+  roles:
+    - jacek.custom_app.common

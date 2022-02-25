@@ -92,3 +92,10 @@ additional_build_steps:
 ```bash
 ansible-builder build -f custom_app_ee_def.yml -t custom_app_ee
 ```
+
+### Push to On-Prem Automation Hub
+
+```bash
+podman login jskauthub.redhat.lab --tls-verify=false
+podman push Image_ID docker://jskauthub.redhat.lab/custom_aap_ee --tls-verify=false
+```
