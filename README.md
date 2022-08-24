@@ -70,7 +70,8 @@ version: 1
 
 build_arg_defaults:
   ANSIBLE_GALAXY_CLI_COLLECTION_OPTS: "-v"
-
+  EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-22/ee-minimal-rhel8'
+  
 ansible_config: 'ansible.cfg'
 
 dependencies:
