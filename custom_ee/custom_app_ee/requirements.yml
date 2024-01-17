@@ -1,3 +1,4 @@
 ---
 collections:
   - jacek.custom_app
+  - cloud.common
